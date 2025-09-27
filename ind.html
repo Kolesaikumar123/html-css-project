@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+      font-family: Arial, sans-serif;
+      
+      
+    }
+
+    .margin {
+      background: pink;
+      padding: 20px;
+      text-align: center;
+      border-radius: 20px;
+      
+
+    }
+
+    .margin::before {
+      content: "margin";
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .border {
+      border: 2px solid black;
+      
+      padding: 20px;
+      background: white;
+    }
+
+    .border::before {
+      content: "border";
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .padding {
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+      border: dotted;
+    }
+
+    .padding::before {
+      content: "padding";
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      background: dodgerblue;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="margin">
+    <div class="border">
+      <div class="padding">
+        <div class="content">
+          place cup at this location<br>PRECISELY.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
